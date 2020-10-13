@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+
+<!-- BootStrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Link Css -->
+	<link href="css/style.css" rel="stylesheet">
+
+<!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">
+
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+<body>
+			
+	<nav class="navbar navbar-expand-lg fixed-top col-sm-12" >
+		<button class="navbar-toggler text-white" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation" id="btn2">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto ">
+				<li class="nav-item m-auto px-2">
+					<form action="/" method="get"
+						class="text-align-center">
+						<button type="submit" class="btn btn-transparent"id="btn2" >Home</button>
+					</form>
+				</li>
+				
+				<li class="nav-item m-auto px-2">
+					<form action="alumnos" method="get" class="text-align-center">
+						<button type="submit" class="btn btn-transparent" id="btn2">Alumnos</button>
+					</form>
+				</li>
+
+				<li class="nav-item m-auto px-2">
+					<form action="materias" method="get" class="text-align-center">
+						<button type="submit" class="btn btn-transparent"id="btn2">Materias</button>
+					</form>
+				</li>
+				
+				<li class="nav-item m-auto px-2">
+					<form action="crearMateria" method="get" class="text-align-center">
+						<button type="submit" class="btn btn-transparent"id="btn2">Crear Materia</button>
+					</form>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<div class="my-5"></div>
+	<div class="text-center">
+		<br>
+		<h5 th:text="${mensaje}"></h5>
+	</div>
+
+	<div class="card align-item-center shadow rounded m-5 p-5" id="card1">
+			<div class="text-center" id="titulo">
+				<h2 class="">Bienvenido a </h2>
+				<h1 class="">Music School</h1>
+				<i class="fas fa-music fa-8x"></i>
+			</div>
+			<div class="text-center pt-3" id="titulo">
+				<form action="formulario" method="get"
+						class="text-align-center">
+						<button type="submit" class="btn shadow rounded" id="btn">Inscríbete aquí</button>
+				</form>
+			</div>	
+		</div>
+
+	<!--jQuery 3.3.1 sin slim-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<!--Popper JS 1.14.3-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+	<!--Bootstrap JS 4.2.1-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</body>
+</html>

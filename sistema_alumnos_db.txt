@@ -1,0 +1,48 @@
+CREATE DATABASE sistema_alumnos_db;
+USE sistema_alumnos_db;
+
+CREATE TABLE alumno(
+	id BIGINT AUTO_INCREMENT,
+    rut VARCHAR(12) UNIQUE,
+    nombre VARCHAR(50),
+    direccion VARCHAR(200),
+    CONSTRAINT pk_alumno PRIMARY KEY (id)
+);
+
+CREATE TABLE materia(
+id BIGINT AUTO_INCREMENT,
+nombre VARCHAR(50),
+alumno_id BIGINT,
+CONSTRAINT pk_materia PRIMARY KEY (id),
+CONSTRAINT fk_alumno FOREIGN KEY materia(alumno_id) REFERENCES alumno(id)
+);
+
+INSERT INTO alumno (rut, nombre, direccion)
+VALUES ("15123456-5", "Joseph Guardiola","Los Españas 115");
+
+INSERT INTO alumno (rut, nombre, direccion)
+VALUES ("12153124-5", "Gunnar Solskjaer","Los United 35");
+
+INSERT INTO alumno (rut, nombre, direccion)
+VALUES ("11215321-4", "Manuel Pellegrinni","Las Betis 3841");
+
+INSERT INTO alumno (rut, nombre, direccion)
+VALUES ("12351125-4", "Mauricio Pochettino","Los Spurs 351");
+
+INSERT INTO alumno (rut, nombre, direccion)
+VALUES ("12351125-4", "Jurgen Klopp","LasPool 3321");
+
+INSERT INTO materia(nombre, alumno_id)
+VALUES ("Fundamentos Bielsa 1", 1);
+
+INSERT INTO materia(nombre, alumno_id)
+VALUES ("Acosta y su 5-4-1", 2);
+
+INSERT INTO materia(nombre, alumno_id)
+VALUES ("Fundamentos Bielsa 2", 3);
+
+INSERT INTO materia(nombre, alumno_id)
+VALUES ("Principios Tabares ", 4);
+
+INSERT INTO materia(nombre, alumno_id)
+VALUES ("Naranja Mecanica by Johan Cruyff ", 5);
